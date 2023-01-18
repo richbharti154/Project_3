@@ -1,0 +1,73 @@
+.container{
+    background-color: black;
+    height: 535.33px;
+    width:  583.33px;
+    align-items: stretch;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 280px;
+    border-radius: 16px;
+    
+    
+}
+.mainComponent{
+    padding-bottom:25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-top: 20px;
+    padding-bottom:60px; */
+    background-color: #303438;
+
+}
+.paragraph1{
+    color: white;
+    font-weight: bold;
+}
+.heading{
+    color: white;
+}
+.inputfieldone{
+    color: white;
+}
+.dob{
+    color: white;
+}
+.paragraphDob{
+    font-size: 14px;
+    
+}
+.headingDob{
+   margin: 12px;
+
+}
+.dobParagraph{
+    color:white;
+    padding-left: 70px;
+}
+.inputfieldtwo{
+   font-size: 70px;    
+   align-items: stretch;
+   width: 298.67px;
+   height: 56px;
+   margin: 12px;
+   background-color: #0F1419;
+   color: white;
+   border: 0.01em solid rgb(184, 175, 175);
+}
+.InputDob{
+    align-items: stretch;
+    width: 298.67px;
+    height: 56px;
+    margin: 12px;
+    background-color: #0F1419;
+    color: white;
+    border: 0.01em solid rgb(184, 175, 175);
+}

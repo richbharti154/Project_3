@@ -1,0 +1,9 @@
+.input{
+    align-items: stretch;
+    width: 298.67px;
+    height: 56px;
+    margin: 12px;
+    background-color: #0F1419;
+    color: white;
+    border: 0.01em solid rgb(184, 175, 175);
+}
