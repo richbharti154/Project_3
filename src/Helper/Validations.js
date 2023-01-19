@@ -1,10 +1,11 @@
 export const isValidemail  =(emailCapture) => {
     const emailRegixExpression = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i ;
-    if(emailRegixExpression.test(emailCapture)){
-        console.log('Email is Valid')
+    const mobileRegixExpression = /^([+]\d{2})?\d{10}$/;
+    if((emailRegixExpression.test(emailCapture)) || (mobileRegixExpression.test(emailCapture)) ){
+        console.log('InValid Details')
         return true
     }else{
-        console.log('Email is invalid')
+        console.log('Email is valid')
         return false
     }
 }
@@ -18,4 +19,13 @@ export const isValidPassword =(passwordCapture) => {
             console.log('password is Invalid')
            return false
         }
+}
+
+export const isValidUserName = (userNameCapture) => {
+    const nameRegixExpression =/^[a-zA-Z0-9]+([_\s/\-]?[a-zA-Z0-9])*$/ ;
+    if(nameRegixExpression.test(userNameCapture)){
+     return true
+    }else{
+     return false
+    }
 }

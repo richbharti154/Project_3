@@ -4,7 +4,7 @@ const Button = (props) => {
 
     return (
         <div className={button.mainComponent}>
-            <button className={button.button}> {props.ButtonText} </button>
+            <button onClick={props.onClick} className={button.button}> {props.ButtonText} </button>
         </div>
     )
 }

@@ -3,8 +3,6 @@ import pagetwo from '../Pages/pagetwo.module.css'
 import Button from '../Atoms/Button'
 import {Link} from 'react-router-dom'
 
-
-
 const PageTwo = () => {
     const TextGoogle =' Sign up with Google'
     const TextApple = 'Sign up with Apple'

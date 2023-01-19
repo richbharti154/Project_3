@@ -1,0 +1,48 @@
+.mainComponent{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+.IconSection{
+    background-color: black;
+    color: white;
+    width: 180px;
+    height: 600px;
+    /* margin-left: 40px; */
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    padding-top: 5px;
+    
+}
+.scrollerSection{
+    background-color: black;
+    color: white;
+    border: 0.05em  rgb(159, 156, 156) solid;
+    width: 750px;
+    overflow: auto;
+    margin-left: 181px;
+}
+.searchSection{
+    background-color: black;
+    color: white;
+    width: 330px;
+    overflow: hidden;
+}
+.image{
+    width: 650px;
+    margin-left: 40px;
+}
+.IconSize{
+    font-size: 30px;
+    padding: 15px;
+    list-style: none;
+    padding-left: 90px;
+}
+.heading{
+    border-bottom: 0.05em solid rgb(159, 156, 156);
+    height: 100px;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding: 10px;
+}
