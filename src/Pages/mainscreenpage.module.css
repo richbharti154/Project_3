@@ -1,48 +1,84 @@
 .mainComponent{
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: black;    
 }
 .IconSection{
     background-color: black;
     color: white;
-    width: 180px;
+    width: 250px;
     height: 600px;
-    /* margin-left: 40px; */
     overflow: hidden;
     position: fixed;
     display: flex;
+    flex-direction: column;
     padding-top: 5px;
+    cursor: pointer;
     
 }
 .scrollerSection{
     background-color: black;
     color: white;
     border: 0.05em  rgb(159, 156, 156) solid;
-    width: 650px;
+    width: 580px;
+    direction:ltr;
+    height: 1000px;
     overflow: auto;
-    margin-left: 181px;
+    margin-left: 250px;
+    margin-top: ;
+
+}
+.scrollerSection::-webkit-scrollbar{
+    display: none;
 }
 .searchSection{
     background-color: black;
     color: white;
-    width: 330px;
-    overflow: hidden;
+    width: 370px;
+    height: 900px;
+    /* overflow: hidden; */
+    padding-left: 15px;
 }
 .image{
-    width: 650px;
-    margin-left: 40px;
+    width: 550px;    
+    margin-top: 30px;
+    padding-top: 70px;
+    padding-left: 15px;
 }
 .IconSize{
-    font-size: 30px;
-    padding: 15px;
+    font-size: 25px;
+    margin: 2px;
     list-style: none;
-    padding-left: 90px;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+.IconSize:hover{
+    background-color: rgb(81, 80, 80);
 }
 .heading{
-    border-bottom: 0.05em solid rgb(159, 156, 156);
-    height: 100px;
+    width: 560px;
+    height: 70px;
     padding-top: 0px;
     margin-top: 0px;
     padding: 10px;
+    border-bottom: 0.05em solid rgb(159, 156, 156);
+    position: fixed;
+}
+.IconName{
+    font-size: 20px;
+    padding-left: 12px;
+    font-family:Arial, Helvetica, sans-serif ;
+    line-height: -20px;
+}
+.tweetButton{
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+.TrendingSection{
+    padding-left: 18px;    
+}
+.follow{
+   padding-left: 20px;
+   padding-top: 390px;
 }
