@@ -1,0 +1,29 @@
+.mainComponent{
+    display: flex;
+    flex-direction: row;
+    background-color: black;    
+}
+.scrollerSection{
+    background-color: black;
+    color: white;
+    border: 0.05em  rgb(159, 156, 156) solid;
+    width: 580px;
+    direction:ltr;
+    height: 1000px;
+    overflow: auto;
+    margin-left: 250px;
+    margin-top: ;
+
+}
+.scrollerSection::-webkit-scrollbar{
+    display: none;
+}
+.heading{
+    width: 560px;
+    height: 70px;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding: 10px;
+    border-bottom: 0.05em solid rgb(159, 156, 156);
+    position: fixed;
+}
