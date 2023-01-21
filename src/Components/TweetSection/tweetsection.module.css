@@ -15,7 +15,8 @@
     background-color: black;
     padding-left: 5px;
     margin-left:5px ;
-    letter-spacing: 1px;    
+    letter-spacing: 1px;
+    margin-top: 10px;    
 }
 .Icon{
     font-size: 38px;
@@ -27,11 +28,28 @@
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
+    align-items: center;
     gap: 20px;
     color: #2394e0;
     margin-top: 0px;
     padding-top: 0px;
     margin-left: 45px;
     font-size: 20px;
-
+}
+.tweetButton{
+    padding: 0px  ;
+    margin:0px ;
+}
+.Button{
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    font-family: "Google Sans",arial,sans-serif;
+    font-size: 15px;
+    border: 0 solid black;
+    border-radius: 30px;
+    background-color: #2394e0;
+    color: white;
+    font-weight: bold;
+    margin-left: 150px ;
 }
