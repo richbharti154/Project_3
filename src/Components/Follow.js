@@ -2,10 +2,16 @@ import follow from '../Components/follow.module.css'
 import {CgProfile} from 'react-icons/cg'
 import Tweet from '../Atoms/Tweet/Tweet'
 import { HiBadgeCheck } from 'react-icons/hi'
+import {useState} from 'react'
 
 
 const Follow = () => {
-    
+     const [isFollow, setIsFollow] = useState(false)
+
+    function Toggle() { 
+        console.log('------clicked---------')
+        setIsFollow(!isFollow)
+    }
     const Data= [ 
         {Icon : <CgProfile />,
          Name : 'SharukKhan',
@@ -33,10 +39,11 @@ const Follow = () => {
               {Data.map( (element) => <p className={follow.Section}>
                 <span className={follow.Icon}>{element.Icon}</span>
                 {element.Name}
-                <span className={follow.Badge}>{element.Badge}</span>    
-                <Tweet Name='Follow' />
+                <span className={follow.Badge}>{element.Badge}</span> 
+                <Tweet props={isFollow} onClick={Toggle}/>  
                 </p>   )}
-                  
+                <div className={follow.buttonSection}>
+                </div>
            </div> 
            </div>
         </div>

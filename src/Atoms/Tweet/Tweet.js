@@ -4,7 +4,8 @@ const Tweet = (props) => {
 
     return (
         <div className={tweet.mainComponent}>
-               <button className={tweet.Button}>{props.Name}  </button> 
+              { props.props ? <button className={tweet.Button} onClick={props.onClick} >Follow  </button> : 
+               <button className={tweet.Button} onClick={props.onClick} >Following  </button> }
         </div>
 
     )

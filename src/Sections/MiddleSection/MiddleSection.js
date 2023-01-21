@@ -14,7 +14,8 @@ const MiddleSection = () => {
 
             <div className={middlesection.TweetSection}>
                <TweetSection placeholder= 'What’s happening?' />        
-            </div>            
+            </div>
+                     
                 <Card />
                 <Card />
                 <Card />

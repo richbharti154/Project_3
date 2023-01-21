@@ -12,6 +12,7 @@
 }
 .Icon{
     font-size: 30px;
+    color: lightgray;
 }
 .FollowName{
     font-size: 20px;
@@ -23,7 +24,7 @@
     display: flex;
 }
 .Section {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     display: flex;
     flex-direction: row;

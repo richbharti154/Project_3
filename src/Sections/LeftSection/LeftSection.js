@@ -7,12 +7,17 @@ import {CiCircleMore} from 'react-icons/ci'
 import {BsTwitter} from 'react-icons/bs'
 import {FaRegListAlt , FaRegBookmark} from 'react-icons/fa'
 import TweetButton from '../../Atoms/TweetButton'
-
-
-
+import {atomState} from '../../Recoil/RecoilAtom'
+import {useRecoilState} from 'recoil'
 
 
 const LeftSection = () => {
+    const [isDialogue , setIsDialogueBox] = useRecoilState(atomState)
+
+    function Toggle() {
+      setIsDialogueBox(!isDialogue)
+    }
+    
     const icons = [
         {icon:<BsTwitter style={{fontSize: '32px'}} />},
         {icon:<RiHome7Fill /> , iconName:'Home'},
@@ -32,7 +37,7 @@ const LeftSection = () => {
             {icons.map((element) => <h1 className={leftsection.IconSize}>{element.icon}<span className={leftsection.IconName}>{element.iconName}</span></h1>)}
             <div className={leftsection.tweetButton}>
 
-            <TweetButton Name='Tweet' />
+            <TweetButton Name='Tweet' onClick={Toggle} />
             </div>
             </div>
             <div className={leftsection.profileIcon}>
