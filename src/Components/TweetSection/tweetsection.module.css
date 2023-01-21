@@ -18,6 +18,10 @@
     letter-spacing: 1px;
     margin-top: 10px;    
 }
+.searchButton:focus{
+    outline: none;
+}
+
 .Icon{
     font-size: 38px;
     padding: 0px;

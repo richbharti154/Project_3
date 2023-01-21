@@ -13,7 +13,7 @@ const RightSection = () => {
     return(
         <div className={rightsection.mainComponent}>
             <div className={rightsection.searchSection}>
-            <Searchbar placeholder={search , text}  />
+            <Searchbar placeholder={text}  />
             <div className={rightsection.TrendingSection}>
             <Trending />
             </div>
