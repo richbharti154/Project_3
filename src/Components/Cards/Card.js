@@ -1,5 +1,5 @@
 import card from '../Cards/card.module.css'
-import { CgProfile } from 'react-icons/cg'
+import { FaUserCircle } from 'react-icons/fa'
 import { HiBadgeCheck } from 'react-icons/hi'
 import {RiMoreFill} from 'react-icons/ri'
 import {FaRegComment} from 'react-icons/fa'
@@ -41,7 +41,7 @@ const Card = () => {
         <div className={card.card}>
 
           <div className={card.header}>  
-          <p className={card.profileIcon}><CgProfile /></p>
+          <p className={card.profileIcon}><FaUserCircle /></p>
           <p className={card.Name}>Elon Musk </p>
           <p className={card.BadgeIcon}><HiBadgeCheck/></p>
           <p className={card.smallName}>@Elon Musk . Jan16</p>

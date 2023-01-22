@@ -1,5 +1,5 @@
 import tweetsection from '../TweetSection/tweetsection.module.css'
-import {CgProfile} from 'react-icons/cg'
+import {FaUserCircle} from 'react-icons/fa'
 import {MdOutlinePhotoSizeSelectActual} from 'react-icons/md'
 import {RiFileGifLine} from 'react-icons/ri'
 import {TfiList} from 'react-icons/tfi'
@@ -13,7 +13,7 @@ const TweetSection = (props) => {
     return (
         <div className={tweetsection.mainComponent }>
             <div className={tweetsection.container }>
-           <span className={tweetsection.Icon}><CgProfile /></span>
+           <span className={tweetsection.Icon}><FaUserCircle /></span>
             <input placeholder={props.placeholder}  className={tweetsection.searchButton}  />
             </div>
             <div className={tweetsection.bottom}>
