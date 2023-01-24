@@ -18,6 +18,9 @@ export default function PopUp() {
   const [open, setOpen] = React.useState(false);
   const [placement, setPlacement] = React.useState();
 
+  const Details = JSON.parse(localStorage.getItem("list"))
+
+
   const handleClick = (newPlacement) => (event) => {
     setAnchorEl(event.currentTarget);
     setOpen((prev) => placement !== newPlacement || !prev);
@@ -38,10 +41,10 @@ export default function PopUp() {
             <Paper>
               <Typography sx={{ p: 1}}>
                 <h4 >
-                  Add Existing Account
+                Add Existing Account
                 </h4>
                 <h4 style={{cursor : "pointer"}} onClick={logOutAndRedirection} >
-                  Log-out 
+                    Logout ({Details.Name})
                 </h4>
               </Typography>
             </Paper>
