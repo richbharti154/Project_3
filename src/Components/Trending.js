@@ -1,6 +1,7 @@
 import trending from '../Components/trending.module.css'
 import {RiMoreFill} from 'react-icons/ri'
 
+
 const Trending = () => {
     const Data = [ 
         {

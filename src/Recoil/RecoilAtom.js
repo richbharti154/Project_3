@@ -5,6 +5,7 @@ export const isDialogBox = atom({
     default:false,
 })
 
+
 export const isLogOut = atom({
     key:'Logout',
     default : false,
@@ -19,6 +20,11 @@ export const isLogin = atom({
 export const isProfileValue = atom({
     key: 'profile',
     default: false,
+})
+export const isLikeValue = atom({
+    key:'Like',
+    default:false,
+
 })
 
 export const Data = atom({

@@ -11,7 +11,6 @@ import TweetButton from '../../Atoms/TweetButton'
 import {isDialogBox , isProfileValue} from '../../Recoil/RecoilAtom'
 import {useRecoilState} from 'recoil'
 import PopUp from '../../Components/PopUp/PopUp'
-import {useState} from 'react'
 
 
 const LeftSection = () => {

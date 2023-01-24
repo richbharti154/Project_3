@@ -1,6 +1,6 @@
 import tweetcard from '../TweetCards/tweetcard.module.css'
-import {Data} from '../../Recoil/RecoilAtom'
-import { useRecoilValue } from 'recoil'
+import {Data ,isLikeValue} from '../../Recoil/RecoilAtom'
+import { useRecoilValue , useRecoilState } from 'recoil'
 import { FaUserCircle } from 'react-icons/fa'
 import { HiBadgeCheck } from 'react-icons/hi'
 import {RiMoreFill} from 'react-icons/ri'
@@ -12,6 +12,7 @@ import {FiShare} from 'react-icons/fi'
 
 
 const TweetCard = () => {
+    const [isLike , setIsLike] = useRecoilState(isLikeValue)
     const tweetData = useRecoilValue(Data)
     const Icons= [
         {
@@ -23,7 +24,7 @@ const TweetCard = () => {
             count : '8000'
         },
         {
-            Icon : <AiOutlineHeart />,
+            Icon : <AiOutlineHeart style={{color: isLike ? 'red' : 'white'}} onClick={Like}/>,
             count : '75.27K'
         },
         {
@@ -34,6 +35,11 @@ const TweetCard = () => {
             Icon: <FiShare />
         }
     ]
+
+    function Like() {
+        setIsLike(!isLike)
+    }
+    console.log(isLike)
 
     return (
         <div className={tweetcard.mainComponent}>            
