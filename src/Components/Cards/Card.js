@@ -6,8 +6,7 @@ import {FaRegComment} from 'react-icons/fa'
 import {FaRetweet} from 'react-icons/fa'
 import {AiOutlineHeart} from 'react-icons/ai'    
 import {CgInsights} from 'react-icons/cg'    
-import {FiShare} from 'react-icons/fi'    
-
+import {FiShare} from 'react-icons/fi'   
 
 
 
@@ -51,14 +50,11 @@ const Card = () => {
           <div className={card.Media}>
             <img className={card.image} src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dHdpdHRlcnxlbnwwfHwwfHw%3D&w=1000&q=80" />
           </div>  
+          
+          
 
           <div className={card.bottom}>
             {Data.map((element)=> <p className={card.Paragraph}><span className={card.Icon}>{element.Icon}</span> {element.count} </p> )}
-            {/* <FaRegComment />
-            <FaRetweet /> 
-            <AiOutlineHeart /> 
-            <CgInsights />
-            <FiShare />  */}
           </div>
 
         </div>

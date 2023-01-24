@@ -14,7 +14,7 @@ const TweetSection = (props) => {
         <div className={tweetsection.mainComponent }>
             <div className={tweetsection.container }>
            <span className={tweetsection.Icon}><FaUserCircle /></span>
-            <input placeholder={props.placeholder}  className={tweetsection.searchButton}  />
+            <input onChange={props.onChange } placeholder={props.placeholder}  className={tweetsection.searchButton}  />
             </div>
             <div className={tweetsection.bottom}>
                < MdOutlinePhotoSizeSelectActual/><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>

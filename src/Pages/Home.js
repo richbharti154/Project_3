@@ -3,7 +3,6 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import Button from '../Atoms/Button'
 import app from './app.module.css'
 import {Link} from 'react-router-dom'
-import { Check } from '@mui/icons-material'
 
 
 function Home() {

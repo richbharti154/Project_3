@@ -3,8 +3,12 @@ import Input from '../Atoms/Input.js'
 import {isValidemail , isValidPassword} from '../Helper/Validations'
 import Button from '../Atoms/Button'
 import { useNavigate } from 'react-router-dom'
+import {isLogin} from '../Recoil/RecoilAtom'
+import { useRecoilState } from 'recoil'
+
 
 const SignIn = () => {
+    const [Login , setLogIn] = useRecoilState (isLogin)
     const [ emailCapture , setEmailCapture] = useState()
     const [ passwordCapture , setPasswordCapture] = useState()
     const [ emailError , setEmailError] = useState(false)
@@ -35,6 +39,7 @@ const SignIn = () => {
     if(res.EmailOrPhone === emailCapture ){
         alert('LogIn Successfull')
         navigate('/main')
+        setLogIn(!Login)
     }else{
         alert('User not found')
     }

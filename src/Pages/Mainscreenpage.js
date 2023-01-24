@@ -4,14 +4,15 @@ import MiddleSection from '../Sections/MiddleSection/MiddleSection'
 import RightSection from '../Sections/RightSection/RightSection'
 import TweetSection from '../Components/TweetSection/TweetSection'
 import { useRecoilValue } from 'recoil'
-import { atomState } from '../Recoil/RecoilAtom'
+import { isDialogBox } from '../Recoil/RecoilAtom'
+import {isLogin} from '../Recoil/RecoilAtom'
 
 const Mainscreeenpage = () => {
-
-  const Value = useRecoilValue(atomState)
+  const LoginStatus = useRecoilValue(isLogin)
+  const Value = useRecoilValue(isDialogBox)
     return (
         <div>
-        <div className={mainscreenpage.mainComponent}>
+       {LoginStatus && <div className={mainscreenpage.mainComponent}>
           <LeftSection />
 
           {Value ? <dialog  className={mainscreenpage.DialogueBox} >
@@ -22,8 +23,8 @@ const Mainscreeenpage = () => {
 
           <MiddleSection />
           <RightSection />           
-        </div>
-       
+        </div>}
+       { !LoginStatus && <h1 className={mainscreenpage}> Please Login First </h1>}
         </div>
     )
 }

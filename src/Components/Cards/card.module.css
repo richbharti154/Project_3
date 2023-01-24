@@ -18,7 +18,7 @@
 .profileIcon{
     font-size: 38px;
     padding: 15px;
-    color: lightgray;
+    color: white;
 }
 .BadgeIcon{
     color: #2394e0;
@@ -69,4 +69,8 @@
 }
 .Icon{
     font-size: 20px;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
 }

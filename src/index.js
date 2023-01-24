@@ -6,15 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import Routing from './Components/Routing.js'
+import { StyledEngineProvider } from '@mui/material/styles';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <StyledEngineProvider injectFirst>
     <BrowserRouter >
     <RecoilRoot>
     <Routing />
     </RecoilRoot>
     </BrowserRouter>
+    </StyledEngineProvider >
+
   </React.StrictMode>
 );
 
