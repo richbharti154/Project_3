@@ -16,6 +16,11 @@ export const isLogin = atom({
     default: false,
 })
 
+export const isProfileValue = atom({
+    key: 'profile',
+    default: false,
+})
+
 export const Data = atom({
     key:'Data',
     default:[

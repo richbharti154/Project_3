@@ -8,18 +8,22 @@ import {CiCircleMore} from 'react-icons/ci'
 import {BsTwitter} from 'react-icons/bs'
 import {FaRegListAlt , FaRegBookmark} from 'react-icons/fa'
 import TweetButton from '../../Atoms/TweetButton'
-import {isDialogBox} from '../../Recoil/RecoilAtom'
+import {isDialogBox , isProfileValue} from '../../Recoil/RecoilAtom'
 import {useRecoilState} from 'recoil'
 import PopUp from '../../Components/PopUp/PopUp'
+import {useState} from 'react'
 
 
 const LeftSection = () => {
     const [isDialogue , setIsDialogueBox] = useRecoilState(isDialogBox)
+    const [isProfile , setIsProfile] = useRecoilState(isProfileValue)
 
     function Toggle() {
       setIsDialogueBox(!isDialogue)
+    }
+    function Profile() {
+      setIsProfile(!isProfile)
     }       
-
     
     const icons = [
         {icon:<BsTwitter style={{fontSize: '32px'}} />},
@@ -29,7 +33,7 @@ const LeftSection = () => {
         {icon:<MdOutlineEmail /> , iconName:'Messages'},
         {icon: <FaRegBookmark />, iconName:'Bookmarks'},
         {icon: <FaRegListAlt />, iconName:'Lists'},
-        {icon:<FaUserCircle /> , iconName:'Profile'},
+        {icon:<FaUserCircle onClick={Profile} /> , iconName:'Profile'},
         {icon:<CiCircleMore /> , iconName:'More'},
       ]
 

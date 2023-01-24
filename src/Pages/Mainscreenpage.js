@@ -6,6 +6,7 @@ import TweetSection from '../Components/TweetSection/TweetSection'
 import { useRecoilValue } from 'recoil'
 import { isDialogBox } from '../Recoil/RecoilAtom'
 import {isLogin} from '../Recoil/RecoilAtom'
+import Home from '../Pages/Home'
 
 const Mainscreeenpage = () => {
   const LoginStatus = useRecoilValue(isLogin)
@@ -24,7 +25,7 @@ const Mainscreeenpage = () => {
           <MiddleSection />
           <RightSection />           
         </div>}
-       { !LoginStatus && <h1 className={mainscreenpage}> Please Login First </h1>}
+       { !LoginStatus && <Home />}
         </div>
     )
 }

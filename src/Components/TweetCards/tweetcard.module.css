@@ -1,7 +1,7 @@
 .Image{
     width: 30rem;
     height: 30rem;
-    margin-bottom:4rem ;
+    margin-bottom: 1rem;
     margin-left: 3.2rem;
 }
 .header{
@@ -38,4 +38,27 @@
 .caption{
     margin-left: 1rem;
     width: 35rem;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:3.9rem;
+    font-size: 15px;
+    color: lightgray;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 3rem;
+}   
+.Paragraph{
+    padding: 0px;
+    margin: 0px;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Icon{
+    font-size: 20px;
 }

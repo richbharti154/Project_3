@@ -18,7 +18,7 @@ const TweetSection = (props) => {
             </div>
             <div className={tweetsection.bottom}>
                < MdOutlinePhotoSizeSelectActual/><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>
-               <span className={tweetsection.tweetButton}><button className={tweetsection.Button}>Tweet</button></span>
+               <span className={tweetsection.tweetButton}><button onClick={props.onClick} className={tweetsection.Button}>Tweet</button></span>
             </div>
         </div>
     )
