@@ -1,7 +1,7 @@
 import rightsection from '../RightSection/rightsection.module.css'
-import Trending from '../../Components/Trending'
-import Searchbar from '../../Components/Searchbar.js' 
-import Follow from '../../Components/Follow.js'
+import Trending from '../../Components/Trending/Trending'
+import Searchbar from '../../Components/SearchBar/Searchbar' 
+import Follow from '../../Components/Follow/Follow.js'
 import {GoSearch } from 'react-icons/go'  
 
 

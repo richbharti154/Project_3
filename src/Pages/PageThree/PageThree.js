@@ -1,5 +1,5 @@
-import pagethree from '../Pages/pagethree.module.css'
-import SignUp from '../Components/SignUp'
+import pagethree from './pagethree.module.css'
+import SignUp from '../../Components/SignUp'
 import { FunctionsOutlined } from '@mui/icons-material'
 
 const PageThree = () => {     

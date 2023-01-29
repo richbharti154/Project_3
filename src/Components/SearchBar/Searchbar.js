@@ -1,4 +1,4 @@
-import searchbar from '../Components/searchbar.module.css';
+import searchbar from './searchbar.module.css';
 
 
 const Searchbar = (props) => {

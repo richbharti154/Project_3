@@ -1,6 +1,6 @@
-import SignIn from '../Components/SignIn'
+import SignIn from '../../Components/SignIn'
 import TwitterIcon from '@mui/icons-material/Twitter'
-import Button from '../Atoms/Button'
+import Button from '../../Atoms/Button/Button'
 import app from './app.module.css'
 import {Link} from 'react-router-dom'
 

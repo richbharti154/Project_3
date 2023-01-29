@@ -1,4 +1,4 @@
-import button from '../Atoms/button.module.css'
+import button from './button.module.css'
 
 const Button = (props) => {
 

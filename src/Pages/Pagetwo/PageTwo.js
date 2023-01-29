@@ -1,6 +1,6 @@
 import TwitterIcon from '@mui/icons-material/Twitter'
-import pagetwo from '../Pages/pagetwo.module.css'
-import Button from '../Atoms/Button'
+import pagetwo from './pagetwo.module.css'
+import Button from '../../Atoms/Button/Button'
 import {Link} from 'react-router-dom'
 
 const PageTwo = () => {

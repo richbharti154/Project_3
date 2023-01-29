@@ -1,8 +1,7 @@
-import follow from '../Components/follow.module.css'
+import follow from './follow.module.css'
 import {FaUserCircle} from 'react-icons/fa'
-import Tweet from '../Atoms/Tweet/Tweet'
+import Tweet from '../../Atoms/Tweet/Tweet'
 import { HiBadgeCheck } from 'react-icons/hi'
-import {useState} from 'react'
 
 
 const Follow = () => {

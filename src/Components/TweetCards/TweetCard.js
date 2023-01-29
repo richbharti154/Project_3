@@ -48,7 +48,7 @@ const TweetCard = () => {
 
     } , [clickedProfile])
 
-    function filteringClickedProfile(index){
+    function filteringClickedPost(index){
         // console.log(tweetData.filter((element) => element.name === tweetData[index].name))
         const clickedObject= tweetData.filter((element) => element.name === tweetData[index].name)
         setClickedProfile(clickedObject)
@@ -56,10 +56,15 @@ const TweetCard = () => {
         // console.log(clickedProfile)
     }
    
+    function filteringClickedProfile(index){
+        const clickedObject= tweetData.filter((element) => element.name === tweetData[index].name)
+        setClickedProfile(clickedObject)
+       navigate('/profile1') 
+    }
 
     return (
         <div className={tweetcard.mainComponent}>            
-            {tweetData.map((element , index) => <div onClick={()=>filteringClickedProfile(index)}><div  className={tweetcard.header}><p className={tweetcard.profileIcon}><FaUserCircle  /></p>
+            {tweetData.map((element , index) => <div  onClick={()=>filteringClickedPost(index)}><div  className={tweetcard.header}><p onClick={()=>filteringClickedProfile(index)} className={tweetcard.profileIcon}><FaUserCircle  /></p>
           <p className={tweetcard.Name}>{element.name} </p>
           <p className={tweetcard.BadgeIcon}><HiBadgeCheck/></p>
           <p className={tweetcard.smallName}>{element.handlerName} . Jan16</p>
@@ -70,7 +75,7 @@ const TweetCard = () => {
             {Icons.map((element)=> <p className={tweetcard.Paragraph}><span className={tweetcard.Icon}>{element.Icon}</span> {element.count} </p> )}
           </div>
           <p className={tweetcard.border}></p>
-          </div>) } 
+          </div> ) } 
 
          
         </div>

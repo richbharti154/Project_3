@@ -1,13 +1,15 @@
 import {Route , Routes} from 'react-router-dom'
-import PageTwo from '../Pages/PageTwo'
-import Home from '../Pages/Home'
-import PageThree from '../Pages/PageThree'
-import Mainscreeenpage from '../Pages/Mainscreenpage'
+import PageTwo from '../Pages/Pagetwo/PageTwo'
+import Home from '../Pages/Home/Home'
+import PageThree from '../Pages/PageThree/PageThree'
+import Mainscreeenpage from '../Pages/Mainscreenpage/Mainscreenpage'
 import UserProfile from './UserProfile/UserProfile'
-import ClientProfile from './ClientProfile/Post'
-
+import ClientPost from './ClientPost/Post'
+import ClientProfile from './ClientProfile/ClientProfile'
 
 const Routing = () => {
+    const details = JSON.parse(localStorage.getItem("list"))
+
     return (
         <div>
             <Routes>
@@ -16,7 +18,8 @@ const Routing = () => {
             <Route path='/sigup' element={<PageThree />} />
             <Route path='/main' element={<Mainscreeenpage />} />
             <Route path='/profile' element={<UserProfile/>} />
-            <Route path='/post' element={<ClientProfile />} />
+            <Route path='/post' element={<ClientPost />} />
+            <Route path='/profile1' element={<ClientProfile />} />
             </Routes>
         </div>
     )

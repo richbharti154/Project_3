@@ -1,5 +1,4 @@
-import tweetbutton from '../Atoms/tweetbutton.module.css'
-import TweetSection from '../Components/TweetSection/TweetSection'
+import tweetbutton from './tweetbutton.module.css'
 
 const TweetButton = (props) => {
 

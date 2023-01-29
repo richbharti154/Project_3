@@ -1,4 +1,4 @@
-import trending from '../Components/trending.module.css'
+import trending from './trending.module.css'
 import {RiMoreFill} from 'react-icons/ri'
 
 

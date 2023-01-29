@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import Input from '../Atoms/Input.js'
+import Input from '../Atoms/Input/Input.js'
 import {isValidemail , isValidPassword , isValidUserName} from '../Helper/Validations'
-import Button from '../Atoms/Button'
+import Button from '../Atoms/Button/Button'
 
 const SignUp =() => {
     const [ emailCapture , setEmailCapture] = useState()

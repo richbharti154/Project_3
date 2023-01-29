@@ -1,4 +1,4 @@
-import input from '../Atoms/input.module.css'
+import input from './input.module.css'
 const Input = (props) => {
     
     return (

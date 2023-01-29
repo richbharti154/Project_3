@@ -64,3 +64,6 @@
 .Icon{
     font-size: 20px;
 }
+.cardContainer{
+    z-index: -1;
+}
