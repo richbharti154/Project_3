@@ -17,10 +17,6 @@ export const isLogin = atom({
     default: false,
 })
 
-export const isProfileValue = atom({
-    key: 'profile',
-    default: false,
-})
 export const isLikeValue = atom({
     key:'Like',
     default:false,
@@ -42,7 +38,8 @@ export const Data = atom({
             viewsCount : '102k',
             followers : 200,
             followings : 400,
-            joinedDate : '22 dec 2022'
+            joinedDate : '22 dec 2022',
+           
         },
         {
             name : 'Mukund',

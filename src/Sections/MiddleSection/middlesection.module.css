@@ -6,13 +6,12 @@
 .scrollerSection{
     background-color: black;
     color: white;
-    border: 0.01em  rgb(159, 156, 156) solid;
+    border: 0.01em  rgb(142, 140, 140) solid;
     width: 580px;
     direction:ltr;
     height: 1000px;
     overflow: auto;
     margin-left: 250px;
-
 }
 .scrollerSection::-webkit-scrollbar{
     display: none;

@@ -13,7 +13,7 @@ export default function PopUp() {
     const [logOut , setLogOut] = useRecoilState(isLogOut)
 
   const navigate = useNavigate()
-
+console.log(logOut , "The Log Out status")
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
   const [placement, setPlacement] = React.useState();

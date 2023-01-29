@@ -8,25 +8,29 @@ import {CiCircleMore} from 'react-icons/ci'
 import {BsTwitter} from 'react-icons/bs'
 import {FaRegListAlt , FaRegBookmark} from 'react-icons/fa'
 import TweetButton from '../../Atoms/TweetButton'
-import {isDialogBox , isProfileValue} from '../../Recoil/RecoilAtom'
+import { isDialogBox } from '../../Recoil/RecoilAtom'
 import {useRecoilState} from 'recoil'
 import PopUp from '../../Components/PopUp/PopUp'
+import { useNavigate } from 'react-router-dom'
 
 
 const LeftSection = () => {
     const [isDialogue , setIsDialogueBox] = useRecoilState(isDialogBox)
-    const [isProfile , setIsProfile] = useRecoilState(isProfileValue)
+    const navigate = useNavigate()
 
     function Toggle() {
       setIsDialogueBox(!isDialogue)
     }
     function Profile() {
-      setIsProfile(!isProfile)
+      navigate('/profile')
+    }
+    function navigateHome(){
+      navigate('/main')
     }       
     
     const icons = [
-        {icon:<BsTwitter style={{fontSize: '32px'}} />},
-        {icon:<RiHome7Fill /> , iconName:'Home'},
+        {icon:<BsTwitter style={{fontSize: '32px'}} onClick={navigateHome} />},
+        {icon:<RiHome7Fill onClick={navigateHome} /> , iconName:'Home'},
         {icon:<CgHashtag /> , iconName:'Explorer'},
         {icon:<FiBell /> , iconName:'Notifications'},
         {icon:<MdOutlineEmail /> , iconName:'Messages'},

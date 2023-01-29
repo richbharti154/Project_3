@@ -1,13 +1,12 @@
 import middlesection from '../MiddleSection/middlesection.module.css'
 import TweetSection from '../../Components/TweetSection/TweetSection'
 import {useState} from 'react'
-import {Data , isProfileValue} from '../../Recoil/RecoilAtom'
+import {Data } from '../../Recoil/RecoilAtom'
 import { useRecoilState , useRecoilValue } from 'recoil'
 import TweetCard from '../../Components/TweetCards/TweetCard'
 
 
 const MiddleSection = () => {
-    const isProfile = useRecoilValue(isProfileValue)
     const [tweetCapture , setTweetCapture] = useState();
     const [addingDataToRecoil , setAddingDataToRecoil] = useRecoilState(Data)
 
@@ -21,7 +20,7 @@ const MiddleSection = () => {
             name: Details.Name,
             tweetText : tweetCapture,
             handlerName : Details.Name,
-            tweetPic :"https://th.bing.com/th/id/OIP.AdzhkXtdEuGDv94QoKVmaAHaHa?pid=ImgDet&rs=1"            
+            tweetPic :""            
         }
         setAddingDataToRecoil([ obj ,...addingDataToRecoil])
         
