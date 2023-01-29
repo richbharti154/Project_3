@@ -65,7 +65,7 @@ const UserProfile = () => {
 
                
                  {updatedTweetData.map((element) => <p>
-                    <div className={userprofile.cardHeader}><FaUserCircle className={userprofile.cardIcon} />
+                    <div className={userprofile.cardHeader}><FaUserCircle  className={userprofile.cardIcon} />
                     <p className={userprofile.cardInnerName}><h4 className={userprofile.cardName}>{element.name}</h4>{element.name}</p></div>
                     <p className={userprofile.tweetText}>{element.tweetText}</p>
                     <img className={userprofile.Image} src={element.tweetPic} />

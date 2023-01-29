@@ -1,10 +1,19 @@
-.Image{
-    max-width: 30rem;
-    max-height: 30rem;
-    margin-bottom: 1rem;
-    margin-left: 3.2rem;
-    outline: none;
-    
+.middleSection{
+    margin-left: 250px;
+    color: white;
+    background-color: black;
+    width: 36.25rem;
+    height: 57rem;
+    border-left: 0.01rem solid grey;
+    border-right: 0.01rem solid grey;
+    overflow: auto;
+}
+.middleSection::-webkit-scrollbar{
+    display: none;
+}
+.mainComponent{
+    display: flex;
+    background-color: black;
 }
 .header{
     display: flex;
@@ -63,4 +72,12 @@
 }
 .Icon{
     font-size: 20px;
+}
+.Image{
+    max-width: 30rem;
+    max-height: 30rem;
+    margin-bottom: 1rem;
+    margin-left: 3.2rem;
+    outline: none;
+    
 }

@@ -5,6 +5,10 @@ export const isDialogBox = atom({
     default:false,
 })
 
+export const clickedProfileIndex = atom({
+    key:'profilekey',
+    default:[]
+})
 
 export const isLogOut = atom({
     key:'Logout',

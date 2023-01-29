@@ -4,6 +4,7 @@ import Home from '../Pages/Home'
 import PageThree from '../Pages/PageThree'
 import Mainscreeenpage from '../Pages/Mainscreenpage'
 import UserProfile from './UserProfile/UserProfile'
+import ClientProfile from './ClientProfile/Post'
 
 
 const Routing = () => {
@@ -15,6 +16,7 @@ const Routing = () => {
             <Route path='/sigup' element={<PageThree />} />
             <Route path='/main' element={<Mainscreeenpage />} />
             <Route path='/profile' element={<UserProfile/>} />
+            <Route path='/post' element={<ClientProfile />} />
             </Routes>
         </div>
     )
