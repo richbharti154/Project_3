@@ -4,7 +4,6 @@ import {useState} from 'react'
 import {TfiFaceSad} from 'react-icons/tfi'
 
 const Trending = () => {
-    
     const Data = [ 
         {
             Trending : 'Trending in India',
@@ -49,13 +48,13 @@ const Trending = () => {
     const [newData , seNewData] = useState(Data)
 
     function handlePopUp(index){
-    newData[index].isPopup = !newData[index].isPopup
+    newData[index].isPopup = !newData[index].isPopup 
     seNewData([...newData])
         
     }
 
     function handleIsIntrested (index) {
-      newData[index].isNotIntrested = !newData[index].isNotIntrested
+      newData[index].isNotIntrested = !newData[index].isPopup 
       seNewData([...newData])  
     }
 
@@ -64,7 +63,8 @@ const Trending = () => {
          <div className={trending.heading}>
             <div className={trending.container}>
             <h2>What’s happening</h2>
-            {newData.map((element , index) => element.isNotIntrested && <p className={trending.paragraph}>{element.Trending} <p className={trending.moreIcon}>{newData[index].isPopup && <div className={trending.popup} onClick={() => handleIsIntrested(index)}><TfiFaceSad />isNotIntrested</div>}<RiMoreFill onClick={()=>handlePopUp(index)}  /></p> <h2 className={trending.Hashtag}>{element.Hashtag}</h2> {element.count}   </p>)}
+            {newData.map((element , index) => element.isNotIntrested && <p className={trending.paragraph}>{element.Trending}
+             <p className={trending.moreIcon}>{newData[index].isPopup && <div className={trending.popup} onClick={() => handleIsIntrested(index)}><TfiFaceSad />isNotIntrested</div>}<RiMoreFill onClick={()=>handlePopUp(index)}  /></p> <h2 className={trending.Hashtag}>{element.Hashtag}</h2> {element.count}   </p>)}
             </div>          
         </div>  
         

@@ -22,7 +22,7 @@ const TweetSection = (props) => {
             <input onChange={props.onChange } placeholder={props.placeholder}  className={tweetsection.searchButton}  />
             </div>
             <div className={tweetsection.bottom}>
-               < MdOutlinePhotoSizeSelectActual/><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>
+              <label for='files'>< MdOutlinePhotoSizeSelectActual/></label><input type='file' id='files' className={tweetsection.fileUpload} /><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>
                <span className={tweetsection.tweetButton}><button onClick={props.onClick} className={tweetsection.Button}>Tweet</button></span>
             </div>
         </div>
