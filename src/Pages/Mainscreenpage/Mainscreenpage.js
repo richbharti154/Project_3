@@ -11,8 +11,7 @@ import {useState} from 'react'
 
 const Mainscreeenpage = () => {
   const LoginStatus = useRecoilValue(isLogin)
-  const DialogueBox = useRecoilValue(isDialogBox)
-
+  const[ DialogueBox , setDialogBox] = useRecoilState(isDialogBox)
   const [tweetCapture , setTweetCapture] = useState();
   const [addingDataToRecoil , setAddingDataToRecoil] = useRecoilState(Data)
   
@@ -31,6 +30,9 @@ const Mainscreeenpage = () => {
        setAddingDataToRecoil([ obj ,...addingDataToRecoil])
        
    }
+   function close() {
+    setDialogBox(false)
+   } 
 
 
     return (
@@ -39,7 +41,7 @@ const Mainscreeenpage = () => {
           <LeftSection />
 
           {DialogueBox ? <dialog  className={mainscreenpage.DialogueBox} >
-            <div className={mainscreenpage.DialogueContainer}>
+            <div className={mainscreenpage.DialogueContainer}> <button onClick={close} className={mainscreenpage.closeButton}>x</button>
               <TweetSection onClick={AddDataToRrecoil} onChange={captureTweetInput}  placeholder='What’s happening???' />  
             </div></dialog> : null}
 

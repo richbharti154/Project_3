@@ -2,10 +2,10 @@ export const isValidemail  =(emailCapture) => {
     const emailRegixExpression = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i ;
     const mobileRegixExpression = /^([+]\d{2})?\d{10}$/;
     if((emailRegixExpression.test(emailCapture)) || (mobileRegixExpression.test(emailCapture)) ){
-        console.log('InValid Details')
+        console.log('Valid Details')
         return true
     }else{
-        console.log('Email is valid')
+        console.log('Invalid Details')
         return false
     }
 }
