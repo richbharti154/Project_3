@@ -31,7 +31,7 @@ const TweetCard = () => {
         },
         {
             Icon : isLike ?<AiFillHeart style={{color:'#FF0080'}} onClick={Like}/> :<AiOutlineHeart onClick={Like} />,
-            count : '100.27K'
+            count : isLike ? '100.28K' : '100.27K'
         },
         {
             Icon : <CgInsights />,

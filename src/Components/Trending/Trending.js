@@ -25,7 +25,7 @@ const Trending = () => {
             Hashtag : '#WhiteHouse',
             count : '92.6k Tweets',
             isNotIntrested : true,
-            isPopup : true
+            isPopup : false
 
          }
         ,{
