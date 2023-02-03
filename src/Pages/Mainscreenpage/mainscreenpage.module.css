@@ -7,7 +7,7 @@
     top: 0px;
     z-index: -1;
     width: 100%;
-}
+} 
 .DialogueContainer{
     background-color: black;
     width: 600px;
@@ -19,7 +19,7 @@
     border: 0.05rem solid white;
     color: white;
     
-
+ 
 }
 .DialogueBox{
     background-color: black;

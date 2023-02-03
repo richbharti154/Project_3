@@ -7,10 +7,14 @@ import {BsEmojiSmile} from 'react-icons/bs'
 import {TbCalendarTime} from 'react-icons/tb'
 import {SlLocationPin} from 'react-icons/sl'
 import { useNavigate } from 'react-router-dom' 
+import {useRecoilState} from 'recoil'
+import {ImageAdress} from '../../Recoil/RecoilAtom'
 
 
 const TweetSection = (props) => {
+    const [imageLocation , setImageLocation] = useRecoilState(ImageAdress)
     const navigate = useNavigate()
+
 
     function navigateProfile(){
         navigate('/profile')
@@ -22,7 +26,7 @@ const TweetSection = (props) => {
             <input onChange={props.onChange } placeholder={props.placeholder}  className={tweetsection.searchButton}  />
             </div>
             <div className={tweetsection.bottom}>
-              <label for='files'>< MdOutlinePhotoSizeSelectActual/></label><input type='file' id='files' className={tweetsection.fileUpload} /><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>
+              <label for='files'>< MdOutlinePhotoSizeSelectActual/></label><input onChange={(e) => setImageLocation(e.target.files) } type='file' id='files' className={tweetsection.fileUpload} /><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>
                <span className={tweetsection.tweetButton}><button onClick={props.onClick} className={tweetsection.Button}>Tweet</button></span>
             </div>
         </div>

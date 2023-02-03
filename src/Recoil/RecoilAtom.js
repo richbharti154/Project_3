@@ -5,6 +5,11 @@ export const isDialogBox = atom({
     default:false,
 })
 
+export const commentBox = atom({
+    key:'comment',
+    default:false
+})
+
 export const clickedProfileIndex = atom({
     key:'profilekey',
     default:[]
@@ -13,7 +18,11 @@ export const clickedProfileIndex = atom({
 export const isLogOut = atom({
     key:'Logout',
     default : false,
+})
 
+export const ImageAdress = atom({
+    key:'image',
+    default:''
 })
 
 export const isLogin = atom({
@@ -43,6 +52,7 @@ export const Data = atom({
             followers : 200,
             followings : 400,
             joinedDate : '22 dec 2022',
+            isComment : false,
            
         },
         {

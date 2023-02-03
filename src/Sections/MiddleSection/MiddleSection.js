@@ -1,7 +1,7 @@
 import middlesection from '../MiddleSection/middlesection.module.css'
 import TweetSection from '../../Components/TweetSection/TweetSection'
 import {useState} from 'react'
-import {Data } from '../../Recoil/RecoilAtom'
+import {Data , ImageAdress } from '../../Recoil/RecoilAtom'
 import { useRecoilState , useRecoilValue } from 'recoil'
 import TweetCard from '../../Components/TweetCards/TweetCard'
 
@@ -9,7 +9,8 @@ import TweetCard from '../../Components/TweetCards/TweetCard'
 const MiddleSection = () => {
     const [tweetCapture , setTweetCapture] = useState();
     const [addingDataToRecoil , setAddingDataToRecoil] = useRecoilState(Data)
-
+    const imageAdress = useRecoilValue(ImageAdress)
+    console.log(imageAdress)
     function captureTweetInput(e) {
      setTweetCapture(e.target.value)   
     }
@@ -20,12 +21,18 @@ const MiddleSection = () => {
             name: Details.Name,
             tweetText : tweetCapture,
             handlerName : Details.Name,
-            tweetPic :""            
+            tweetPic : imageAdress            
         }
         setAddingDataToRecoil([ obj ,...addingDataToRecoil])
+        let data = localStorage.userTweets?.length > 0 ? JSON.parse(localStorage.userTweets) : [];
+        data = [...data, obj]
+        
+        localStorage.setItem('userTweets' , JSON.stringify(data))
         
     }
-    console.log(addingDataToRecoil)
+    const data =  JSON.parse(localStorage.getItem("userTweets"))
+    const userTweets = [data]
+    // console.log(userTweets)
 
     
     return (

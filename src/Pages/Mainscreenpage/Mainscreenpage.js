@@ -8,7 +8,7 @@ import { isDialogBox } from '../../Recoil/RecoilAtom'
 import {isLogin , Data} from '../../Recoil/RecoilAtom'
 import Home from '../Home/Home'
 import {useState} from 'react'
-
+ 
 const Mainscreeenpage = () => {
   const LoginStatus = useRecoilValue(isLogin)
   const[ DialogueBox , setDialogBox] = useRecoilState(isDialogBox)

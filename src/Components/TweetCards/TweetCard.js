@@ -1,5 +1,5 @@
 import tweetcard from '../TweetCards/tweetcard.module.css'
-import {Data ,isLikeValue , clickedProfileIndex} from '../../Recoil/RecoilAtom'
+import {Data ,isLikeValue , clickedProfileIndex , commentBox} from '../../Recoil/RecoilAtom'
 import { useRecoilValue , useRecoilState } from 'recoil'
 import { FaUserCircle } from 'react-icons/fa'
 import { HiBadgeCheck } from 'react-icons/hi'
@@ -13,20 +13,31 @@ import {FiShare} from 'react-icons/fi'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {useState} from 'react'
+import TweetSection from '../TweetSection/TweetSection'
 
 const TweetCard = () => {
     const [isLike , setIsLike] = useRecoilState(isLikeValue)
     const [likeCount , setLikeCount] = useState(100)
     const [clickedProfile , setClickedProfile] = useRecoilState(clickedProfileIndex)
-    const tweetData = useRecoilValue(Data)
+    // const [isCommentBox , setIsCommentBox] = useRecoilState(commentBox)
+    const [tweetData , setTweetData] = useRecoilState(Data)
+    const data =  JSON.parse(localStorage.getItem("userTweets"))
     const navigate = useNavigate()
+
+    useEffect( () => {
+        let data = localStorage.userTweets?.length > 0 ? JSON.parse(localStorage.userTweets) : [];
+        setTweetData(data)
+    } , [])
+
+
+
     const Icons= [
+        // {
+        //     Icon : <FaRegComment onClick={Toggle} />,
+        //     count : '4000'
+        // },
         {
-            Icon : <FaRegComment />,
-            count : '4000'
-        },
-        {
-            Icon : <FaRetweet />,
+            Icon : <FaRetweet />, 
             count : '8000'
         },
         {
@@ -40,12 +51,26 @@ const TweetCard = () => {
         {
             Icon: <FiShare />
         }
-    ]
+    ]   
 
     function Like() {
         setIsLike(!isLike)
         setLikeCount(likeCount + 1)
     }
+    function Toggle(index) {
+        const clickedObject = tweetData[index]
+        // tweetData[index].isComment = true
+        // tweetData[index].splice(index , 1)
+        const newObject = {...clickedObject}
+        newObject.isComment = true
+        setTweetData([...tweetData])
+      }
+    function close(index) {
+        // const clickedObject = tweetData[index]
+        // const newObject = {...clickedObject}
+        // newObject.isComment = false
+        // setTweetData([newObject , ...tweetData])
+       } 
 
     useEffect(() => {   // Added useEffect because i was not getting the updated recoil value
 
@@ -64,17 +89,24 @@ const TweetCard = () => {
         setClickedProfile(clickedObject)
        navigate('/profile1') 
     }
-
     return (
         <div className={tweetcard.mainComponent}>            
             {tweetData.map((element , index) => <div ><div  className={tweetcard.header}><p onClick={()=>filteringClickedProfile(index)} className={tweetcard.profileIcon}><FaUserCircle  /></p>
           <p onClick={()=>filteringClickedPost(index)} className={tweetcard.Name}>{element.name} </p>
+
+          {tweetData[index].isComment ? <dialog  className={tweetcard.DialogueBox} >
+            <div className={tweetcard.DialogueContainer}> <button onClick={()=>close(index)} className={tweetcard.closeButton}>x</button>
+             <FaUserCircle /><input />
+            </div></dialog> : null}
+
           <p onClick={()=>filteringClickedPost(index)} className={tweetcard.BadgeIcon}><HiBadgeCheck/></p>
           <p onClick={()=>filteringClickedPost(index)} className={tweetcard.smallName}>{element.handlerName} . Jan16</p>
           <p onClick={()=>filteringClickedPost(index)} className={tweetcard.more}><RiMoreFill /></p></div>
           <p onClick={()=>filteringClickedPost(index)} className={tweetcard.caption}>{element.tweetText} </p>
           <img onClick={()=>filteringClickedPost(index)} className={tweetcard.Image} src={element.tweetPic} />
+
           <div className={tweetcard.bottom}>
+            <p className={tweetcard.Paragraph}><span className={tweetcard.Icon}><FaRegComment onClick={()=>Toggle(index)} /></span> 4000  </p>
             {Icons.map((element)=> <p className={tweetcard.Paragraph}><span className={tweetcard.Icon}>{element.Icon}</span> {element.count} </p> )}
           </div>
           <p className={tweetcard.border}></p>

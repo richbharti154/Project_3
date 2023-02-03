@@ -5,8 +5,6 @@ import {HiOutlineArrowLeft} from 'react-icons/hi'
 import {  useNavigate } from 'react-router-dom'
 import {FaUserCircle} from 'react-icons/fa'
 import {BiCalendar} from 'react-icons/bi'
-import { Data } from '../../Recoil/RecoilAtom'
-import { useRecoilValue } from 'recoil'
 import { FaRegComment , FaRetweet} from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
 import {CgInsights} from 'react-icons/cg'
@@ -34,10 +32,11 @@ const Icons= [
 ]
 
 const UserProfile = () => {
-    const tweetData = useRecoilValue(Data)
     const navigate = useNavigate()
     const userDetails =   JSON.parse(localStorage.getItem("list"))
-    const updatedTweetData = tweetData.filter((element) => element.name === userDetails.Name )
+    const localData = JSON.parse(localStorage.getItem("userTweets"))
+    console.log(localData)
+    const updatedTweetData = localData.filter((element) => element.name === userDetails.Name )
 
     function navigateHome(){
         navigate('/main')
@@ -46,7 +45,7 @@ const UserProfile = () => {
         <div className={userprofile.mainComponent}>
                 <LeftSection />
                 <div className={userprofile.middleSection}>
-                    <p onClick={navigateHome} className={userprofile.backIcon}><HiOutlineArrowLeft  /><h5 className={userprofile.nameTag}>{userDetails.Name}</h5></p>
+                    <p  className={userprofile.backIcon}><HiOutlineArrowLeft onClick={navigateHome} /><h5 className={userprofile.nameTag}>{userDetails.Name}</h5></p>
                 <div className={userprofile.profileBackground}>
                     <FaUserCircle className={userprofile.profileIcon} />
                     <button className={userprofile.button}>Set up profile</button></div> 
