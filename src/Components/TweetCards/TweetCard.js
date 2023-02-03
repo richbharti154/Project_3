@@ -13,8 +13,7 @@ import {FiShare} from 'react-icons/fi'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {useState} from 'react'
-import TweetSection from '../TweetSection/TweetSection'
-
+    
 const TweetCard = () => {
     const [isLike , setIsLike] = useRecoilState(isLikeValue)
     const [likeCount , setLikeCount] = useState(100)
@@ -78,14 +77,15 @@ const TweetCard = () => {
 
     function filteringClickedPost(index){
         // console.log(tweetData.filter((element) => element.name === tweetData[index].name))
-        const clickedObject= tweetData.filter((element) => element.name === tweetData[index].name)
+        const clickedObject= tweetData.filter((element) => element.tweetText === tweetData[index].tweetText)
         setClickedProfile(clickedObject)
         navigate('/post')
         // console.log(clickedProfile)
     }
    
     function filteringClickedProfile(index){
-        const clickedObject= tweetData.filter((element) => element.name === tweetData[index].name)
+        const clickedObject= [tweetData[index]]
+        // const clickedObject= tweetData.filter((element) => element.name === tweetData[index].name)
         setClickedProfile(clickedObject)
        navigate('/profile1') 
     }

@@ -34,14 +34,14 @@ const Icons= [
 const UserProfile = () => {
     const navigate = useNavigate()
     const userDetails =   JSON.parse(localStorage.getItem("list"))
-    const localData = JSON.parse(localStorage.getItem("userTweets"))
-    console.log(localData)
-    const updatedTweetData = localData.filter((element) => element.name === userDetails.Name )
-
+    const localData = JSON.parse(localStorage.getItem("userTweets"))  
+    let updatedTweetData = localData.filter((element) => element.name === userDetails.Name )
+    
     function navigateHome(){
         navigate('/main')
       } 
     return(
+        
         <div className={userprofile.mainComponent}>
                 <LeftSection />
                 <div className={userprofile.middleSection}>

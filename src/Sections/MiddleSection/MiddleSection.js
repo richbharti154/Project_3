@@ -10,7 +10,6 @@ const MiddleSection = () => {
     const [tweetCapture , setTweetCapture] = useState();
     const [addingDataToRecoil , setAddingDataToRecoil] = useRecoilState(Data)
     const imageAdress = useRecoilValue(ImageAdress)
-    console.log(imageAdress)
     function captureTweetInput(e) {
      setTweetCapture(e.target.value)   
     }
@@ -25,13 +24,13 @@ const MiddleSection = () => {
         }
         setAddingDataToRecoil([ obj ,...addingDataToRecoil])
         let data = localStorage.userTweets?.length > 0 ? JSON.parse(localStorage.userTweets) : [];
-        data = [...data, obj]
+        data = [obj , ...data ]
         
         localStorage.setItem('userTweets' , JSON.stringify(data))
         
     }
-    const data =  JSON.parse(localStorage.getItem("userTweets"))
-    const userTweets = [data]
+    // const data =  JSON.parse(localStorage.getItem("userTweets"))
+    // const userTweets = [data]
     // console.log(userTweets)
 
     
