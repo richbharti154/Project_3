@@ -9,7 +9,7 @@ import TweetCard from '../../Components/TweetCards/TweetCard'
 const MiddleSection = () => {
     const [tweetCapture , setTweetCapture] = useState();
     const [addingDataToRecoil , setAddingDataToRecoil] = useRecoilState(Data)
-    const imageAdress = useRecoilValue(ImageAdress)
+    const [imageAdress , setImageAdress] = useRecoilState(ImageAdress)
     function captureTweetInput(e) {
      setTweetCapture(e.target.value)   
     }
@@ -20,13 +20,15 @@ const MiddleSection = () => {
             name: Details.Name,
             tweetText : tweetCapture,
             handlerName : Details.Name,
-            tweetPic : imageAdress            
+            tweetPic : imageAdress,
+            isComment : false            
         }
         setAddingDataToRecoil([ obj ,...addingDataToRecoil])
         let data = localStorage.userTweets?.length > 0 ? JSON.parse(localStorage.userTweets) : [];
         data = [obj , ...data ]
         
         localStorage.setItem('userTweets' , JSON.stringify(data))
+        setImageAdress("")
         
     }
     // const data =  JSON.parse(localStorage.getItem("userTweets"))
