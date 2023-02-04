@@ -2,7 +2,7 @@ import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import CommentBox from './CommentBox';
 import {FaRegComment} from 'react-icons/fa'
-
+import dialog from './dialog.module.css'
 
 export default function DialogBox() {
   const [open, setOpen] = React.useState(false);
@@ -17,23 +17,15 @@ export default function DialogBox() {
 
   return (
     <div>
-      <button  onClick={handleClickOpen}>
-      <FaRegComment />
+      <button className={dialog.button}  onClick={handleClickOpen}>
+      <FaRegComment className={dialog.icon}  />
       </button>
       <Dialog
         open={open}
         onClose={handleClose}     
       >
-
-        <CommentBox />
-       
-      
-      
-          {/* <button onClick={handleClose}>Disagree</button>
-          <button onClick={handleClose} autoFocus>
-            Agree
-          </button> */}
-       
+                <CommentBox />
+                       
       </Dialog>
     </div>
   );

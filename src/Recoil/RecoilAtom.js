@@ -9,6 +9,10 @@ export const commentBox = atom({
     key:'comment',
     default:false
 })
+export const commentInput = atom({
+    key:'comment',
+    default:null
+})
 
 export const clickedProfileIndex = atom({
     key:'profilekey',
