@@ -14,6 +14,8 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {useState} from 'react'
 import DialogBox from '../CommentDialog/Dialog'
+import {commentClickedIndex} from '../../Recoil/RecoilAtom'
+
 
 const TweetCard = () => {
     const [isLike , setIsLike] = useRecoilState(isLikeValue)
@@ -32,10 +34,6 @@ const TweetCard = () => {
 
 
     const Icons= [
-        // {
-        //     Icon : <FaRegComment onClick={Toggle} />,
-        //     count : '4000'
-        // },
         {
             Icon : <FaRetweet />, 
             count : '8000'
@@ -58,13 +56,13 @@ const TweetCard = () => {
         setLikeCount(likeCount + 1)
     }
     function Toggle(index) {
-        // const clickedObject = tweetData[index]
-        //     // tweetData[index].isComment = !tweetData[index].isComment
-        //     // tweetData.splice(index , 1)
-        // const newObject = {...clickedObject}
-        // newObject.isComment = true
-        // console.log(newObject)
-        // setTweetData([ newObject,...tweetData])
+        const clickedObject = tweetData[index]
+            // tweetData[index].isComment = !tweetData[index].isComment
+            // tweetData.splice(index , 1)
+        const newObject = {...clickedObject}
+        newObject.isComment = true
+        console.log(newObject)
+        setTweetData([ ...tweetData, newObject])
       }
     function close(index) {
         // const clickedObject = tweetData[index]
@@ -108,7 +106,7 @@ const TweetCard = () => {
           <img onClick={()=>filteringClickedPost(index)} className={tweetcard.Image} src={element.tweetPic} />
 
           <div className={tweetcard.bottom}>
-            <p className={tweetcard.Paragraph}><span className={tweetcard.Icon}><DialogBox /></span> 4000  </p>
+            <p className={tweetcard.Paragraph}><span className={tweetcard.Icon}><DialogBox props={index} /></span> 4000  </p>
             {Icons.map((element)=> <p className={tweetcard.Paragraph}><span className={tweetcard.Icon}>{element.Icon}</span> {element.count} </p> )}
           </div>
           <p className={tweetcard.border}></p>

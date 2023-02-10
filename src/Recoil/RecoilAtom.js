@@ -1,10 +1,14 @@
 import {atom} from 'recoil'
 
+
 export const isDialogBox = atom({
     key:'Shoaib',
     default:false,
 })
-
+export const clickedComment = atom({
+    key:'index',
+    default:[]
+})
 export const commentBox = atom({
     key:'comment',
     default:false

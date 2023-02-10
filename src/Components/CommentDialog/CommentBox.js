@@ -14,7 +14,6 @@ const CommentBox = () => {
     const [imageLocation , setImageLocation] = useRecoilState(ImageAdress)
     const [commentCapture , setCommentCapture] = useRecoilState(commentInput)
     const userDetails = JSON.parse(localStorage.getItem("list"))
-    console.log(userDetails)
 
     function handleReplyButton(){
         const obj = {
@@ -30,10 +29,10 @@ const CommentBox = () => {
     }
 
     return(
-        <div>
+        <div> 
             <div className={commentbox.container }>
             <span className={commentbox.Icon}><FaUserCircle  /></span>
-            <input onChange={(e) => setCommentCapture(e.target.value)} className={commentbox.searchButton}  />
+            <input placeholder='Tweet your reply' onChange={(e) => setCommentCapture(e.target.value)} className={commentbox.searchButton}  />
             </div>
             <div className={commentbox.bottom}>
             <label for='files'>< MdOutlinePhotoSizeSelectActual/></label><input onChange={(e) => setImageLocation(URL.createObjectURL(e.target.files[0])) } type='file' id='files' className={commentbox.fileUpload} /><RiFileGifLine/><TfiList/><BsEmojiSmile/><TbCalendarTime/><SlLocationPin/>

@@ -29,13 +29,11 @@ const MiddleSection = () => {
         
         localStorage.setItem('userTweets' , JSON.stringify(data))
         setImageAdress("")
+     console.log( imageAdress)
+
         
     }
-    // const data =  JSON.parse(localStorage.getItem("userTweets"))
-    // const userTweets = [data]
-    // console.log(userTweets)
 
-    
     return (
         <div className={middlesection.mainComponent}>
 
