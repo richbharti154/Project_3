@@ -44,9 +44,10 @@ const LeftSection = () => {
             <div className={leftsection.mainComponent}>
 
             <div className={leftsection.IconSection}>
-            {icons.map((element) => <h1 className={leftsection.IconSize}>{element.icon}<span className={leftsection.IconName}>{element.iconName}</span></h1>)}
+            {icons.map((element) => <h1 className={leftsection.IconSize}>{element.icon}
+            <span className={leftsection.IconName}>{element.iconName}</span></h1>)}
             <div className={leftsection.tweetButton}>
-
+             
             <TweetButton Name='Tweet' onClick={Toggle} />
             <PopUp />
             </div>

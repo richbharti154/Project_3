@@ -18,3 +18,19 @@
     padding-left: 20px;
     padding-top: 390px;
  }
+ @media screen and(max-width:790px) {
+    .searchSection{
+        display: none;
+    }
+    .TrendingSection{
+        display:none
+    }
+    .follow{
+        display: none;
+    }
+ }
+ @media screen and(max-width:600px) {
+    .mainComponent{
+        display: none;
+    }
+ }

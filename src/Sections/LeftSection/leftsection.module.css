@@ -40,3 +40,15 @@
     margin-left: 1rem;
     padding: 0px;
 }
+@media (max-width:600px) {
+    .IconName{
+        display: none;
+    }
+    .IconSection{
+        position: fixed;
+        width: auto;
+    }
+    .tweetButton{
+        display: none;
+    }
+ }

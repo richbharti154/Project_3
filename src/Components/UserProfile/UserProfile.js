@@ -43,7 +43,7 @@ const UserProfile = () => {
     return(
         
         <div className={userprofile.mainComponent}>
-                <LeftSection />
+                <LeftSection  />
                 <div className={userprofile.middleSection}>
                     <p  className={userprofile.backIcon}><HiOutlineArrowLeft onClick={navigateHome} /><h5 className={userprofile.nameTag}>{userDetails.Name}</h5></p>
                 <div className={userprofile.profileBackground}>
@@ -65,11 +65,13 @@ const UserProfile = () => {
                
                  {updatedTweetData.map((element) => <p>
                     <div className={userprofile.cardHeader}><FaUserCircle  className={userprofile.cardIcon} />
-                    <p className={userprofile.cardInnerName}><h4 className={userprofile.cardName}>{element.name}</h4>{element.name}</p></div>
+                    <p className={userprofile.cardInnerName}><h4 className={userprofile.cardName}>
+                        {element.name}</h4>{element.name}</p></div>
                     <p className={userprofile.tweetText}>{element.tweetText}</p>
                     <img className={userprofile.Image} src={element.tweetPic} />
                     <div className={userprofile.cardBottom}>
-                     {Icons.map((element) => <p><span className={userprofile.cardBottomIcon}>{element.Icon}</span>{element.count} </p>)}   
+                     {Icons.map((element) => <p><span className={userprofile.cardBottomIcon}>
+                        {element.Icon}</span>{element.count} </p>)}   
                     </div>
                      <p className={userprofile.border}></p>
                     </p>)}

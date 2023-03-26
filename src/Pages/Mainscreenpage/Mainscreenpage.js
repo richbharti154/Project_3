@@ -36,17 +36,25 @@ const Mainscreeenpage = () => {
 
 
     return (
-        <div>
-       {LoginStatus && <div className={mainscreenpage.mainComponent}>
-          <LeftSection />
+         <div>
+         
+         
+          
+        {LoginStatus && <div className={mainscreenpage.mainComponent}>
+       
+        <LeftSection />
+         
+          
 
           {DialogueBox ? <dialog  className={mainscreenpage.DialogueBox} >
-            <div className={mainscreenpage.DialogueContainer}> <button onClick={close} className={mainscreenpage.closeButton}>x</button>
+            <div className={mainscreenpage.DialogueContainer}> <button onClick={close} 
+            className={mainscreenpage.closeButton}>x</button>
               <TweetSection onClick={AddDataToRrecoil} onChange={captureTweetInput}  placeholder='What’s happening???' />  
             </div></dialog> : null}
-
+          
           <MiddleSection />
-          <RightSection />           
+          
+          <RightSection />        
         </div>}
        { !LoginStatus && <Home />}
         </div>
